@@ -1,0 +1,10 @@
+#! /usr/bin/awk -f
+{
+  if($0 ~/change/ ||$0 ~/hurt/ || $0 ~/pain/ || $0 ~/bore/ || $0 ~/difficult/ || $0 ~/Missing/ || $0 ~/We have to/ || $0 ~/understanding/ || $0 ~/boring/ || $0 ~/care/ || $0 ~/hard/ || $0 ~/lack/ || $0 ~/lacking/ || $0 ~/bad/ || $0 ~ /too/ || $0 ~/struggling/ || $0 ~/no/ || $0 ~/not/ || $0 ~/Not/ || $0 ~/mprove/ || $0 ~/hard/ || $0 ~/leep/ || $0 ~/boring/ || $0 ~/less/ || $0 ~ /can't/ || $0 ~/cannot/ || $0 ~/Lack/ || $0 ~/low/ || $0 ~/eft/ || $0 ~/leav/ || $0 ~/missing/)
+  {
+    print "O|"$0
+  }
+  else{
+    print "W|"$0
+  }
+}
